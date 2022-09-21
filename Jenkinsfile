@@ -13,7 +13,7 @@ pipeline {
                 sh 'rm -fr *'
                 sh 'aws s3 cp s3://cicd-sunny/html-helloworld-$BUILD_NUMBER.zip .'
                 sh 'unzip html-helloworld-$BUILD_NUMBER.zip'
-                sh 'scp index.html root@172.31.32.154:/var/www/html/'
+                sh 'scp index.html root@172.31.7.112:/var/www/html/'
             }
         }
     }
